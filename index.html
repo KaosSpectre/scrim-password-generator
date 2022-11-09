@@ -9,10 +9,18 @@
 				Generate a <br /><span id="color-change">Random Password</span>
 			</h1>
 			<h3 id="sub-title">Never use an insecure password again.</h3>
-			<button class="btn" id="generate" onclick="getPassword()">
-				Generate Passwords
-			</button>
-			<button class="btn" id="reset" onclick="reset()">Reset Passwords</button>
+			<button class="btn" id="generate"> Generate Passwords </button>
+			<button class="btn" id="reset">Reset Passwords</button>
+			<div id="slider-container"
+				><label for="slider">Characters</label
+				><input
+					type="range"
+					id="slider"
+					name="slider"
+					min="8"
+					max="15"
+					oninput="sliderVal()" /><span id="length"></span
+			></div>
 
 			<div id="line"></div>
 			<div id="passwords">

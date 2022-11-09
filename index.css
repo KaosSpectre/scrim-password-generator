@@ -54,12 +54,27 @@ body {
 	cursor: pointer;
 }
 
+#slider-container {
+	margin-top: 20px;
+}
+label {
+	background: #4adf86;
+	padding: 10px 15px;
+	border-radius: 10px;
+	color: white;
+	text-shadow: 0 0 2p black;
+}
+#slider {
+	line-height: 50%;
+	vertical-align: middle;
+}
+
 #line {
 	content: "";
 	height: 5px;
 	width: 90%;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 50px;
 	background: #2f3e53;
 }
 

@@ -91,13 +91,21 @@ const characters = [
 	"?",
 	"/",
 ];
-let passwordLength = 15;
 const pass1El = document.getElementById("pass1");
 const pass2El = document.getElementById("pass2");
-const btnEl = document.getElementById("generate");
+const generateEl = document.getElementById("generate");
+const resetEl = document.getElementById("reset");
+const sliderEl = document.getElementById("slider");
+
+function sliderVal() {
+	let val = sliderEl.value;
+	document.getElementById("length").textContent = val;
+	return val;
+}
 
 function generate() {
 	let password = "";
+	let passwordLength = sliderVal();
 	for (let i = 0; i < passwordLength; i++) {
 		const randomIndex = Math.floor(Math.random() * characters.length);
 		password += characters[randomIndex];
@@ -105,12 +113,12 @@ function generate() {
 	return password;
 }
 
-function getPassword() {
+generateEl.addEventListener("click", function () {
 	pass1El.textContent = generate();
 	pass2El.textContent = generate();
-}
+});
 
-function reset() {
+resetEl.addEventListener("click", function reset() {
 	pass1El.textContent = "Password 1";
 	pass2El.textContent = "Password 2";
-}
+});
